@@ -1,2 +1,2 @@
 # IDo
-Webathon Project
+Quality Education WebApp

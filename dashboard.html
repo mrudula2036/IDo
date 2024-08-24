@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #documentViewer {
+            width: 100%;
+            height: calc(100vh - 150px); /* Adjust as per your layout */
+            border: none;
+        }
+
+        .document-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Welcome, <span id="username"></span></h1>
+            <h2>Subjects</h2>
+            <div id="subjects-container"></div>
+        </div>
+        <div class="right-side">
+            
+    
+            <div id="notes-section" style="display: none;">
+                <h2 id="notes-heading"></h2>
+                <div id="notes-container"></div>
+            </div>
+            <div id="document-preview" style="display: none;">
+                <button id="back-to-notes">Back to Notes</button>
+                <iframe id="documentViewer" class="document-preview"></iframe>
+            </div>
+            <div id="no-notes-section" style="display: none;">
+                <h2>No Notes Found</h2>
+                <p>Add notes by uploading documents:</p>
+                <input type="file" id="note-file-upload" accept=".pdf,.doc,.docx" />
+                <button id="upload-note-file">Upload</button>
+                <p id="note-upload-status-upload"></p>
+            </div>
+        </div>
+        <iframe src="./IDo/index.html" width="800" height="400" style="border: 100px;"></iframe>    
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

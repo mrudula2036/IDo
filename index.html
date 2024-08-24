@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <img src="./assets/images/logo.gif" alt="Logo">
+    </div>
+    <div id="auth-content" style="display: none;">
+        <div class="container">
+            <div class="form-container sign-up-container">
+                <form id="signup-form">
+                    <h2>Create Account</h2>
+                    <input type="text" id="signup-username" placeholder="Username" required />
+                    <input type="email" id="signup-email" placeholder="Email" required />
+                    <input type="password" id="signup-password" placeholder="Password" required />
+                    <button id="signup-button">Sign Up</button>
+                    <p id="signup-error" class="error-message"></p>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form id="login-form">
+                    <h2>Sign in</h2>
+                    <input type="email" id="login-username" placeholder="Email" required />
+                    <input type="password" id="login-password" placeholder="Password" required />
+                    <button id="login-button">Login</button>
+                    <p id="login-error" class="error-message"></p>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h2>Welcome Back!</h2>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="show-login">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h2>Hello, Friend!</h2>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="show-signup">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-content" style="display: none;">
+        <!-- Main content of your web app goes here -->
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
